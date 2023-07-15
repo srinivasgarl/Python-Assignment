@@ -1,0 +1,186 @@
+{
+  "metadata": {
+    "language_info": {
+      "codemirror_mode": {
+        "name": "python",
+        "version": 3
+      },
+      "file_extension": ".py",
+      "mimetype": "text/x-python",
+      "name": "python",
+      "nbconvert_exporter": "python",
+      "pygments_lexer": "ipython3",
+      "version": "3.8"
+    },
+    "kernelspec": {
+      "name": "python",
+      "display_name": "Python (Pyodide)",
+      "language": "python"
+    }
+  },
+  "nbformat_minor": 4,
+  "nbformat": 4,
+  "cells": [
+    {
+      "cell_type": "code",
+      "source": "guess_me = 7\n\nif guess_me < 7:\n    print('too low')\nelif guess_me > 7:\n    print('too high')\nelse:\n    print('just right')\n",
+      "metadata": {
+        "trusted": true
+      },
+      "execution_count": 2,
+      "outputs": [
+        {
+          "name": "stdout",
+          "text": "just right\n",
+          "output_type": "stream"
+        }
+      ]
+    },
+    {
+      "cell_type": "code",
+      "source": "guess_me = 7\nstart = 1\n\nwhile True:\n    if start < guess_me:\n        print('too low')\n    elif start == guess_me:\n        print('found it!')\n        break\n    else:\n        print('oops')\n        break\n    start += 1\n",
+      "metadata": {
+        "trusted": true
+      },
+      "execution_count": 3,
+      "outputs": [
+        {
+          "name": "stdout",
+          "text": "too low\ntoo low\ntoo low\ntoo low\ntoo low\ntoo low\nfound it!\n",
+          "output_type": "stream"
+        }
+      ]
+    },
+    {
+      "cell_type": "code",
+      "source": "my_list = [3, 2, 1, 0]\n\nfor value in my_list:\n    print(value)\n",
+      "metadata": {
+        "trusted": true
+      },
+      "execution_count": 4,
+      "outputs": [
+        {
+          "name": "stdout",
+          "text": "3\n2\n1\n0\n",
+          "output_type": "stream"
+        }
+      ]
+    },
+    {
+      "cell_type": "code",
+      "source": "even_numbers = [num for num in range(10) if num % 2 == 0]\n",
+      "metadata": {
+        "trusted": true
+      },
+      "execution_count": 6,
+      "outputs": []
+    },
+    {
+      "cell_type": "code",
+      "source": "squares = {num: num**2 for num in range(10)}\n",
+      "metadata": {
+        "trusted": true
+      },
+      "execution_count": 7,
+      "outputs": []
+    },
+    {
+      "cell_type": "code",
+      "source": "odd = {num for num in range(10) if num % 2 != 0}\n",
+      "metadata": {
+        "trusted": true
+      },
+      "execution_count": 8,
+      "outputs": []
+    },
+    {
+      "cell_type": "code",
+      "source": "generator = ('Got ' + str(num) for num in range(10))\n\nfor item in generator:\n    print(item)\n",
+      "metadata": {
+        "trusted": true
+      },
+      "execution_count": 9,
+      "outputs": [
+        {
+          "name": "stdout",
+          "text": "Got 0\nGot 1\nGot 2\nGot 3\nGot 4\nGot 5\nGot 6\nGot 7\nGot 8\nGot 9\n",
+          "output_type": "stream"
+        }
+      ]
+    },
+    {
+      "cell_type": "code",
+      "source": "def good():\n    return ['Harry', 'Ron', 'Hermione']\nresult = good()\nprint(result)\n",
+      "metadata": {
+        "trusted": true
+      },
+      "execution_count": 10,
+      "outputs": [
+        {
+          "name": "stdout",
+          "text": "['Harry', 'Ron', 'Hermione']\n",
+          "output_type": "stream"
+        }
+      ]
+    },
+    {
+      "cell_type": "code",
+      "source": "def get_odds():\n    for num in range(10):\n        if num % 2 != 0:\n            yield num\n\ncount = 0\nfor number in get_odds():\n    count += 1\n    if count == 3:\n        print(number)\n        break\n",
+      "metadata": {
+        "trusted": true
+      },
+      "execution_count": 11,
+      "outputs": [
+        {
+          "name": "stdout",
+          "text": "5\n",
+          "output_type": "stream"
+        }
+      ]
+    },
+    {
+      "cell_type": "code",
+      "source": "class OopsException(Exception):\n    pass\n\ntry:\n    raise OopsException()\nexcept OopsException:\n    print('Caught an oops')\n",
+      "metadata": {
+        "trusted": true
+      },
+      "execution_count": 12,
+      "outputs": [
+        {
+          "name": "stdout",
+          "text": "Caught an oops\n",
+          "output_type": "stream"
+        }
+      ]
+    },
+    {
+      "cell_type": "code",
+      "source": "titles = ['Creature of Habit', 'Crewel Fate']\nplots = ['A nun turns into a monster', 'A haunted yarn shop']\n\nmovies = dict(zip(titles, plots))\nprint(movies)\n",
+      "metadata": {
+        "trusted": true
+      },
+      "execution_count": 14,
+      "outputs": [
+        {
+          "name": "stdout",
+          "text": "{'Creature of Habit': 'A nun turns into a monster', 'Crewel Fate': 'A haunted yarn shop'}\n",
+          "output_type": "stream"
+        }
+      ]
+    },
+    {
+      "cell_type": "code",
+      "source": "",
+      "metadata": {},
+      "execution_count": null,
+      "outputs": []
+    },
+    {
+      "cell_type": "code",
+      "source": "",
+      "metadata": {},
+      "execution_count": null,
+      "outputs": []
+    }
+  ]
+}
